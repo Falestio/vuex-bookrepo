@@ -14,6 +14,7 @@
         <li v-for="book in books" :key="book.name" class="list">
           <span>{{ book.name }}</span>
           <span>{{ book.author }}</span>
+          <button @click="deleteBook(book)">delete</button>
         </li>
       </ul>
     </div>
@@ -37,6 +38,10 @@ export default {
 
       console.log(this.$store.state.books)
     },
+
+    deleteBook(book){
+      this.$store.commit('deleteBook', book)
+    }
 
 
   },

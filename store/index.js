@@ -8,6 +8,9 @@ export const mutations = {
         console.log('book added')
     },
 
+    deleteBook(state, book) {
+        state.books.splice(book, 1)
+    },
 
 }
 
